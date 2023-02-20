@@ -1,5 +1,41 @@
-.computerImage{
-    width: 500px;
-    height: 500px;
-    margin:50px;
+#computerImage{
+padding-top:50px;
+}
+
+button{
+    margin:0;
+    padding:0;
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+}
+
+.computerSection{
+
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    background-color:maroon;
+}
+
+.playerSection{
+
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    background-color:midnightblue;
+    Border-top:solid 20px;
+}
+
+.buttons{
+    padding:50px;
+}
+
+.playerCard{
+    margin-left:50px;
+    margin-right:50px;
+    margin-bottom:50px;
 }

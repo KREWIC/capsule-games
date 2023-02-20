@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/rpsStyle.css">
+    <link rel="stylesheet" href="css/rpsStyle.css">
     <script src="js/RPS.js" defer></script>
     
     <title>Document</title>
@@ -15,21 +15,27 @@
 
 </div>
 
-    <div class = 'ComputerSection'>
+    <div class = 'computerSection'>
 
-        <img src ='images/Empty_Computer.svg' class = 'computerImage'>
+        <img src ='images/Empty_Computer.svg' id = 'computerImage'>
 
+        <div id = 'compScore'>
+            <h1>0</h1>
+        </div>
     </div>
 
-    <div class="PlayerSection">
+    <div class="playerSection">
 
+    <div id = 'playerScore'>
+        <h1>0</h1>
+    </div>
     
     <div class = 'buttons'>
-        <button id = 'Paper'>Paper</button>
+        <button id = 'Paper' class = 'playerCard'><img src = 'images/Paper_Card.svg'></button>
 
-        <button id = 'Rock'>Rock</button>
+        <button id = 'Rock' class = 'playerCard'><img src = 'images/Rock_Card.svg'></button>
 
-        <button id = 'Scissors'>Scissors</button>
+        <button id = 'Scissors'class = 'playerCard'><img src = 'images/Scissors_Card.svg'></button>
 
     </div>
 
