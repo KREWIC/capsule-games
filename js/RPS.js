@@ -44,9 +44,9 @@
         }
         //^^ computer selects a random choice from 1 - 3
         
-        function playRound()
+        function playRound(playerNum)
         {
-            userChoice = getUserChoice(userChoice);
+            userChoice = playerNum
             computerChoice = computerSelect(computerChoice);
             console.log(computerChoice);
             //^^Actual choices first in the round
@@ -59,7 +59,7 @@
         
             else if (userChoice == 1 && computerChoice == 3 ||
                 userChoice == 2 && computerChoice == 1||
-                userChoice == 3 && ComputerChoice ==2)
+                userChoice == 3 && computerChoice ==2)
                 {
                     alert('You lose');
                     lossCount+=1;
@@ -77,20 +77,17 @@
         }
         
         console.log(Math.random(1,5))
+
+        const button1 = document.querySelector('#Paper');
+        button1.addEventListener('click', () =>{ playRound(1)});
+
+        const button2 = document.querySelector('#Rock');
+        button2.addEventListener('click', () => {playRound(2)});
+
+        const button3 = document.querySelector('#Scissors');
+        button3.addEventListener('click', () => {playRound(3)});
+
+
         
-        while(winCount<5&&lossCount<5)
-        {
-            playRound();
-        }
-        
-        if (lossCount == 5)
-        {
-            alert("Wow you're kind of bad at this");
-        }
-        
-        else if (winCount == 5)
-        {
-            alert('You beat the computer. Congrats!');
-        }
         //^^ the above will run the code until 5 wins or 5 losses accrue. At which point a winner is declared.
         
