@@ -9,6 +9,17 @@
         let userChoice=0;
         let computerChoice=0;
         //^^ user and computer choice
+
+        const button1 = document.querySelector('#Paper');
+        const button2 = document.querySelector('#Rock');
+        const button3 = document.querySelector('#Scissors');
+        //^^Player buttons
+
+        const compImage = document.querySelector('#computerImage');
+
+        const scoreTextComp = document.querySelector('#compScore');
+        const scoreTextPlayer = document.querySelector('#playerScore');
+        //^^ Score text
         
         function getUserChoice(val)
         {
@@ -53,7 +64,7 @@
         
             if (userChoice == computerChoice)
             {
-                alert('tie');
+                console.log('tie');
             }
             //^^ For all ties
         
@@ -61,16 +72,18 @@
                 userChoice == 2 && computerChoice == 1||
                 userChoice == 3 && computerChoice ==2)
                 {
-                    alert('You lose');
+                    
                     lossCount+=1;
+                    scoreTextComp.textContent = lossCount;
                     return;
                 }
             //^^ For losses
         
                 else
                 {
-                    alert('You win');
+                    
                     winCount+=1;
+                    scoreTextPlayer.textContent = winCount;
                     return;
                 }
                 //^^ For wins
@@ -78,13 +91,13 @@
         
         console.log(Math.random(1,5))
 
-        const button1 = document.querySelector('#Paper');
+        
         button1.addEventListener('click', () =>{ playRound(1)});
 
-        const button2 = document.querySelector('#Rock');
+       
         button2.addEventListener('click', () => {playRound(2)});
 
-        const button3 = document.querySelector('#Scissors');
+        
         button3.addEventListener('click', () => {playRound(3)});
 
 
