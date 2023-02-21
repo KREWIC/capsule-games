@@ -21,33 +21,6 @@
         const scoreTextPlayer = document.querySelector('#playerScore');
         //^^ Score text
         
-        function getUserChoice(val)
-        {
-          val = prompt('Paper \n Rock \n Scissors \n make a selection');
-          //^^ Takes in user input expects string value
-        
-          val = val.toUpperCase();
-          //^^ Catch all for any case, sets it to a standard
-        
-          if (val == 'PAPER')
-          {
-            return val = 1;
-            
-          }
-        
-          if (val =='ROCK')
-          {
-            return val = 2;
-            
-          }
-        
-          if (val == 'SCISSORS')
-          {
-            return val = 3;
-          }
-          //^^ Above lines convert the text to a numerical value to be compared to the Computer choice
-        }
-        
         
         function computerSelect(Num)
         {
@@ -74,7 +47,14 @@
                 {
                     
                     lossCount+=1;
+                    console.log(lossCount);
                     scoreTextComp.textContent = lossCount;
+
+                    if (lossCount >= 5)
+                    {
+                      alert("You Lose");
+                    }
+
                     return;
                 }
             //^^ For losses
@@ -83,7 +63,13 @@
                 {
                     
                     winCount+=1;
-                    scoreTextPlayer.textContent = winCount;
+                    scoreTextPlayer.textContent = winCount;  
+                    
+                    if(winCount >= 5)
+                      {
+                        alert("You Win");
+                      }
+
                     return;
                 }
                 //^^ For wins
@@ -99,8 +85,5 @@
 
         
         button3.addEventListener('click', () => {playRound(3)});
-
-
-        
-        //^^ the above will run the code until 5 wins or 5 losses accrue. At which point a winner is declared.
+//^^ the above will run the code until 5 wins or 5 losses accrue. At which point a winner is declared.
         
